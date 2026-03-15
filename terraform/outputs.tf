@@ -10,11 +10,3 @@ output "mongo_private_ips" {
     k => vm.network_interface[0].network_ip
   }
 }
-
-#output "mongo_public_ips" {
-#  description = "Public IPs of MongoDB VMs"
-#  value = {
-#    for k, vm in google_compute_instance.mongo :
-#    k => vm.network_interface[0].access_config[0].nat_ip
-#  }
-#}
