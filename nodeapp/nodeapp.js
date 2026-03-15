@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const mongoUri = process.env.MONGO_URI
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -10,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 // Connect to MongoDB
 mongoose
   .connect(
-    'mongodb://mongo:27017/docker-node-mongo',
+    mongoUri,
     { useNewUrlParser: true }
   )
   .then(() => console.log('MongoDB Connected'))
