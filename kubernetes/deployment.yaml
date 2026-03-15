@@ -23,8 +23,8 @@ spec:
           env:
             - name: MONGO_URI
               valueFrom:
-                secretKeyRef:
-                  name: nodeapp-secret
+                configMapKeyRef:
+                  name: nodeapp-config
                   key: MONGO_URI
           resources:
             requests:
