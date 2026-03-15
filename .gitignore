@@ -1,0 +1,18 @@
+# ignore all files
+*
+
+# don't ignore these files
+
+!**/
+!.gitignore
+
+!*.js
+!*.ejs
+!*.json
+!*.sh
+
+!*.md
+
+!Dockerfile
+
+!*.yaml
