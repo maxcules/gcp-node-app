@@ -20,7 +20,7 @@ kubectl apply -f ingress.yaml
 
 
 #### Important
-delete the ingress resource before destroying the whole infrastracture to prevent the load balancer to remain orphaned
+delete the ingress resource before destroying the whole infrastracture to prevent the load balancer from remaining orphaned
 ```
 kubectl delete -f ingress.yaml
 ```
