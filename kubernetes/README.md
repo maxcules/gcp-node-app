@@ -15,12 +15,12 @@ kubectl apply -f hpa.yaml
 kubectl apply -f service.yaml
 kubectl apply -f ingress.yaml
 ```
-- it may take a few second for the load balancer to be provisioned
+- it may take a few minutes for the load balancer to be provisioned
 
 
 
 #### Important
-delete the ingress resouce before destroying the whole infrastratuce to prevent the load balancer to remain orphaned
+delete the ingress resource before destroying the whole infrastracture to prevent the load balancer to remain orphaned
 ```
 kubectl delete -f ingress.yaml
 ```
