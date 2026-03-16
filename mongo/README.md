@@ -1,8 +1,8 @@
 ## MongoDB Setup
 
 1. copy and run `mongo_init.sh` on each VM
-2. use `mongosh` inside VM named `mongo-1` to enter DB
-3. once inside the DB, run the code:
+2. use `mongosh` on the VM named `mongo-1` to access the MongoDB shell
+3. once inside the shell, run:
 ```
 rs.initiate({
   _id: "rs0",
@@ -13,4 +13,7 @@ rs.initiate({
   ]
 })
 ```
-4. check status with `rs.status()`
+4. verify the replica set status:
+```
+rs.status()
+```
