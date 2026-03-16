@@ -12,7 +12,7 @@ Kubernetes Ingress
    ↓
 ClusterIP Service
    ↓
-Node.js Pods on GKE
+Node.js Pods on GKE (HPA: 2-10)
    ↓
 MongoDB Replica Set on 3 Compute Engine VMs
    ├── mongo-1: Primary
@@ -34,14 +34,14 @@ cd terraform
 terraform init
 terraform apply
 ```
-2. Configure MongoDB on the VM instances as for the README in `mongo/`
+2. Configure MongoDB on the VM instances according to the README in `mongo/`
 3. Build and push the Node.js image
 ```
 cd nodeapp
 docker build -t <your-image> .
 docker push <your-image>
 ```
-4. Deploy the app to GKE as for the README in `kubernetes/`
+4. Deploy the app to GKE according to the README in `kubernetes/`
 - the deployment need to be changed to pull the correct image
 5. Access the app by using the external IP in the browser
 ```
@@ -57,7 +57,7 @@ kubectl delete -f kubernetes/
 2. Destroy the infrastracture
 ```
 cd terraform
-terrafrom destroy
+terraform destroy
 ```
 
 
